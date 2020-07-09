@@ -24,8 +24,8 @@ export class ExchangeRateService {
         return this.httpClient.post<ExchangeRateResponse>(`${this.URL_SERVER}/api/exchange-rates/converter`, exchangeRateRequest, this.HTTP_OPTIONS);
     }
 
-    getCurrencies(): Observable<string[]> {
+    getCurrencies(): Observable<any> {
       // tslint:disable-next-line:max-line-length
-      return this.httpClient.get<string[]>(`${this.URL_SERVER}/api/exchange-rates/currencies`, this.HTTP_OPTIONS);
+      return this.httpClient.get<any>(`${this.URL_SERVER}/api/exchange-rates/currencies`, this.HTTP_OPTIONS);
     }
 }

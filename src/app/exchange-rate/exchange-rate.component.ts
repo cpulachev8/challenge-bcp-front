@@ -14,7 +14,7 @@ export class ExchangeRateComponent implements OnInit {
   exchangeRateResponse = {} as ExchangeRateResponse;
   isError = false;
   errorMessage: string = '';
-  currencies: [];
+  currencies: string[];
 
   constructor(private exchangeRateService: ExchangeRateService) { }
 
